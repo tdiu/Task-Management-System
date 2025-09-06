@@ -10,7 +10,6 @@ public class TaskDTO {
     private Status status;
     private String author;
     private String assignee;
-    private long total_comments;
 
     public TaskDTO(Task task) {
         this.id = task.getId().toString();
@@ -19,6 +18,15 @@ public class TaskDTO {
         this.status = task.getStatus();
         this.author = task.getAuthor().getEmail();
         this.assignee = (task.getAssignee() == null) ? "none" : task.getAssignee().getEmail();
+    }
+
+    public TaskDTO(String id, String title, String description, Status status, String author, String assignee) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.status = status;
+        this.author = author;
+        this.assignee = assignee;
     }
 
     public String getid() {

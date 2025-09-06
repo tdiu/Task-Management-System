@@ -26,7 +26,7 @@ public class TaskController {
     @GetMapping("/api/tasks")
     public ResponseEntity<Object> getTasks(@RequestParam("author") Optional<String> user,
                                            @RequestParam("assignee") Optional<String> assignee) {
-        List<CommentTaskDTO> tasks = userService.getTasks(user, assignee);
+        List<TaskWithCommentsDTO> tasks = userService.getTasks(user, assignee);
         return ResponseHelper.success(tasks);
     }
 

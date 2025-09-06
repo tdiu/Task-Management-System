@@ -99,8 +99,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<CommentTaskDTO> getTasks(Optional<String> user, Optional<String> assignee) {
-        List<CommentTaskDTO> tasks;
+    public List<TaskWithCommentsDTO> getTasks(Optional<String> user, Optional<String> assignee) {
+        List<TaskWithCommentsDTO> tasks;
 
         if (user.isPresent() && assignee.isPresent()) {
             tasks = taskRepository.findByAuthorAndAssignee(user.get().trim(), assignee.get().trim());
