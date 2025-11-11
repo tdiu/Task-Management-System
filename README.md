@@ -1,3 +1,5 @@
+A REST API for a Task Management System using Java, SpringBoot, and Hibernate. Allows for user registration, authentication through basic HTTP login and JWT bearer tokens, as well as task creation and management. 
+
 ## /api/accounts
 ### POST /api/accounts
 Registration: Takes a POST request body in the following format containing a unique email and password for user registration:
