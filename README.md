@@ -83,7 +83,7 @@ Accepts the following JSON request body to update the `STATUS` of a given task:
 
 
 ### PUT /api/tasks/{taskId}/comments
-Accepts a JSON body containing comment text:
+Accepts the following JSON request format to create a comment for a given task.
 ```
 {
   "text": <string, not blank>
